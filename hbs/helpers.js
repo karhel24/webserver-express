@@ -1,6 +1,6 @@
 const hbs = require('hbs');
 
-// Helpers - cuando se importa este helpers.js, el siguiente se ejecuta y se queda REGISTRADO
+// Helpers - cuando se importa este helpers.js, el siguiente codigo se ejecuta y se queda REGISTRADO
 hbs.registerHelper('getAnyo', () => {
     return new Date().getFullYear();
 });

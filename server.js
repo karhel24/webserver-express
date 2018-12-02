@@ -4,14 +4,13 @@ const hbs = require('hbs');
 
 require('./hbs/helpers');
 
+// Se añade env.PORT que puede ser proporcionado pot Heroku
 const port = process.env.PORT || 3000;
 
 const params = {
     nombre: 'carlos grau sal',
     anyo: new Date().getFullYear()
 }
-
-
 
 /**
  * Middleware es una instruccion o callback que se va a ejecutar siempre 
@@ -22,9 +21,8 @@ app.use(express.static(__dirname + '/public'));
 // Express HBS engine
 hbs.registerPartials(__dirname + '/views/partials');
 
+// Configurar hbs como motor de views por defecto para que las pueda renderizar los hbs
 app.set('view engine', 'hbs');
-
-
 
 // Solicitud GET cuando el path sea una slash '/'. Middleware para filtar peticiones
 app.get('/', (req, res) => {
