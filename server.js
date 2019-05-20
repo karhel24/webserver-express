@@ -40,9 +40,13 @@ app.get('/', (req, res) => {
 
     res.render('home', params);
 
+
+
 });
 
 app.get('/about', (req, res) => res.render('about', params));
+
+
 
 app.get('/data', (req, res) => {
     res.send('Hola data')
